@@ -1,0 +1,119 @@
+body,
+footer,
+.home .slider .slick-prev:hover,
+.home .slider .slick-next:hover,
+.home3 .home-bg .skewed,
+.navbar .navbar-toggler,
+.contact .form .form-group textarea,
+.contact .form .form-group input,
+.about .tabs-about .nav-item, .keynote .tabs-about .nav-item,
+.about .tabs-about .nav-link.active, .keynote .tabs-about .nav-link.active,
+.option-box .color-option,
+.option-box .gear-check,
+.navbar, 
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #0c0c0c;
+}
+
+.home .slider .slick-prev, .home .slider .slick-next {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home .slider .slick-prev:hover,
+.home .slider .slick-next:hover,
+footer p,
+.testim .tabbable .tab-content .profile-details i,
+.serv .content h4, .award .content h4, .course .content h4, .gallery h4, .awards .content h4,
+.contact h2, .contact h4, .contact p, .educational h2, .educational h4, .educational p,
+.about .tabs-about .tab-content .tab-pane .skills .progress .progress-bar:before,
+.about .tabs-about .tab-content .tab-pane .skills .progress-text,
+.about .tabs-about .tab-content .tab-pane.profile .title-info,
+.navbar .collapse-menu .open-menu:before,
+.navbar .collapse-menu .closed-menu:before,
+.navbar .social-media a,
+.navbar .nav-item a {
+    color: #ccc;
+}
+
+.home .title p,
+.work .shuffle ul li, .speaking .shuffle ul li,
+.about .tabs-about .tab-content .tab-pane.profile h6 span:last-child,
+.about .tabs-about .nav-link, .keynote .tabs-about .nav-link,
+.title h1,
+.work .container h2, .speaking .container h2,
+.option-box .color-option ul li span,
+.option-box .gear-check {
+    color: #eee;
+}
+
+.testim .tabbable .tab-content .profile-details p,
+.serv .content p, .award .content p, .course .content p,
+.about p, .keynote p, .educational p,
+.about .tabs-about .tab-content .tab-pane p, .keynote .tabs-about .tab-content .tab-pane p, 
+.educational .tabs-about .tab-content .tab-pane p, .work .tabs-about .tab-content .tab-pane p, .speaking .tabs-about .tab-content .tab-pane p,
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #aaa;
+}
+
+.title h1:before {
+    color: #232323;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	border-color: #222 #222 #0c0c0c;
+}
+
+.option-box .color-option ul li,
+.navbar .collapse-menu .open-menu:before,
+.navbar .collapse-menu .closed-menu:before {
+    border: 1px solid #ccc;
+}
+.navbar .navbar-toggler {
+    border: 1px solid #1d1d1d;
+}
+
+footer {
+    border-top: 1px solid #1d1d1d;
+}
+
+.navbar { 
+    border-right: 1px solid #000;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #222;
+}
+
+.about .tabs-about ul, .keynote .tabs-about ul,
+.navbar .nav-item {
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.home .title .btn-home a {
+    box-shadow: -3px 2px 6px rgba(8, 8, 8, 0.3);
+}
+
+.option-box .color-option,
+.contact .infos,
+.work .shuffle ul li.active, .speaking .shuffle ul li.active,
+.option-box .gear-check,
+.navbar .navbar-nav{
+    box-shadow: -3px 5px 12px #080808;
+}
+.home3 .image {
+    box-shadow: -10px 2px 12px #080808;
+}
+
+@media(min-width: 100px) and (max-width: 991px) {
+    .home2 .title .btn-home a {
+        box-shadow: -1px 3px 11px #888;
+    }
+    
+    .home2 .title h1,
+    .home2 .title p {
+        color: #212529;
+    }
+}

@@ -1,0 +1,67 @@
+.home .slider .slick-prev,
+.home .slider .slick-next,
+footer p a,
+footer p a:hover,
+.testim .tabbable .tab-content .profile-details h4,
+.serv .serv-vid .play i,
+.about .tabs-about .nav-link.active,
+.navbar .social-media a:hover,
+.navbar .nav-item.active-nav a {
+  color: #7ca95c; }
+
+.maps .open-map,
+.contact .form .message .send-btn,
+.contact .form .message .send-btn input.btn,
+.contact .form .message .send-btn,
+.work .shuffle ul li.active,
+.serv .serv-vid .play:hover,
+.about .tabs-about .tab-content .tab-pane .skills .progress .progress-bar,
+.about .tabs-about .tab-content .tab-pane .btn-about a,
+.home .title .btn-home a,
+.navbar-toggler .menu .line1,
+.navbar-toggler .menu .line2,
+.navbar-toggler .menu .line3 {
+  background-color: #7ca95c; }
+
+.testim .tabbable .tab-content .profile-details,
+.work .shuffle ul li.active,
+.work .shuffle ul li {
+  border: 1px solid #7ca95c; }
+
+.testim .tabbable .tab-content .profile-image .image-tab,
+.testim .tabbable .list-tabs ul .active .image-tab {
+  border: 2px solid #7ca95c; }
+
+.navbar .nav-item.active-nav {
+  border-bottom: 1px solid #7ca95c; }
+
+.contact .form .form-group textarea,
+.contact .form .form-group input {
+  border-bottom: 2px solid #7ca95c; }
+
+.about .tabs-about .nav-link.active {
+  border-top: 2px solid #7ca95c; }
+
+.home3 .overlay {
+  background-color: rgba(124, 169, 92, 0.9); }
+
+.testim .client .overlay-cl {
+  background-color: rgba(124, 169, 92, 0.7); }
+
+.navbar .logo .bg_logo,
+.serv .content img {
+  filter: hue-rotate(50deg); }
+
+.background-gradient {
+  background: #7ca95c;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #7ca95c 0%, #93c96d 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #7ca95c 0%, #93c96d 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #7ca95c 0%, #93c96d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ca95c', endColorstr='#93c96d',GradientType=1 );
+  /* IE6-9 */ }
+
+/*# sourceMappingURL=green-color.css.map */

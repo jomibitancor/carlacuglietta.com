@@ -1,0 +1,1665 @@
+/*
+***************************************************** /
+
+* Theme Name: Reva
+
+* Theme URI: http://reva.eb2a.com/
+
+* Author: Bouthaina
+
+* Author URI: https://themeforest.net/user/bouthaina09
+
+* Description:  Reva - Personal One Page Template
+
+* Version: 1.0.0
+
+* Tags: html5, css3, jquery, bootstrap, theme, template, modern, responsive, cv, resume
+
+*****************************************************/
+
+/*
+|------------------------------------------------------
+| CSS INDEX
+|------------------------------------------------------
+
+1. GLOBAL STYLESHEET
+
+2. NAVBAR SECTION
+
+3. HEADER SECTION
+
+4. ABOUT SECTION
+
+5. SERVICES SECTION
+
+6. PORTFOLIO SECTION
+
+7. TESTIM SECTION
+
+8. CLIENT SECTION
+
+9. CONTACT SECTION
+
+10. FOOTER
+
+
+/*==========================================================
+
+                    1. START GLOBAL STYLESHEET
+
+===========================================================*/
+
+
+/*
+	Import
+	------------------------------------------------
+*/
+
+@import 'mixins';
+@import 'fonticon';
+
+* {
+    @include box-sizing;
+}
+
+a:hover,
+a:focus,
+a {
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    @include font-smoothing;
+    overflow-x: hidden;
+}
+
+.kaushan {
+    font-family: 'Kaushan Script', sans-serif;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+
+section {
+    padding-left: 220px;
+    @include animate( all, 340ms, ease-in-out);
+    height: 100%;
+    &.about,
+	&.keynote,
+	&.educational,
+    &.serv,
+    &.award,
+    &.course {
+        height: 100vh;
+    }
+}
+
+.bg-image { 
+	background-position: center center; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+}
+
+section:not(:first-of-type) {
+    display: none;
+}
+
+.title {
+    padding: 60px 70px;
+    h1 {
+        position: relative;
+        font-size: 42px;
+        color: #1e1e1e;
+        &:before {
+            position: absolute;
+            color: #efefef;
+            text-transform: uppercase;
+            left: -5px;
+            top: 12px;
+            z-index: -1;
+        }
+    }
+}
+
+/*==========================================================
+
+                    2. START NAVBAR STYLESHEET
+
+===========================================================*/
+
+.navbar {
+    border-right: 1px solid #eee;
+    background-color: #fff;
+    width: 220px;
+    display: block;
+    position: fixed;
+    height: 100vh;
+    @include animate( all, 340ms, ease-in-out);
+    &.open-nav {
+        left: 0;
+    }
+    &.default-menu {
+        width: 220px;
+    }
+    &.small-menu {
+        width: 100px;
+        .social-media {
+            display: none;
+        }
+        .navbar-nav {
+            width: 60px;
+        }
+        .logo .bg_logo {
+            background-size: 43px;
+            width: 100%;
+            top: 65px;
+        }
+        .nav-item {
+            span {
+                display: none;
+            }
+            a {
+                font-size: 17px;
+            }
+        }
+    }
+    .collapse {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+    }
+    .navbar-nav {
+        display: block;
+        box-shadow: -3px 5px 12px #f1f1f1;
+        width: 180px;
+    }
+    .nav-item {
+        margin: 16px 0;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        &:last-child {
+            border: none;
+            margin-bottom: 0;
+        }
+        a {
+            font-size: 13px;
+            color: #333;
+        }
+        i {
+            display: block!important;
+            padding-bottom: 6px;
+            font-size: 14px;
+            &.icon-picture,
+            &.icon-envelope {
+                font-size: 14px;
+            }
+        }
+    }
+    .collapse-menu {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        z-index: 2;
+        .open-menu:before {
+            content: '> ';
+            font-weight: bolder;
+            font-size: 22px;
+            position: absolute;
+            top: 0;
+            left: -27px;
+            border: 1px solid #333;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .closed-menu:before {
+            content: '< ';
+            font-weight: bolder;
+            font-size: 22px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #333;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    .logo {
+        z-index: 1;
+        height: 80px;
+        .bg_logo {
+            background-image: url(http://via.placeholder.com/60x60); /* Here The Logo */ 
+            background-size: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 50px;
+            display: inline-block;
+            width: 100%;
+            position: absolute;
+            top: 25px;
+            left: 0;
+        }
+    }
+    .social-media {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        a {
+            color: #333;
+            font-size: 14px;
+            padding-right: 12px;
+            @include animate ( all, 340ms, ease-in-out );
+            &:last-child {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    margin: 45px auto;
+}
+section.close-menu {
+    padding-left: 100px;
+}
+
+.navbar-toggler {
+    width: 50px;
+    height: 43px;
+    display: inline-block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    .menu {
+        width: 27px;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        .line1,
+        .line2,
+        .line3 {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: -2px;
+            border-radius: 15px;
+            @include animate( all, 320ms, cubic-bezier(0.42, 0, 0.38, 1.54) );
+        }
+        .line1 {
+            top: 2px;
+        }
+        .line2 {
+            top: 10px;
+        }
+        .line3 {
+            top: 18px;
+        }
+    }
+    .menu.toggle {
+        .line1,
+        .line2,
+        .line3 {
+            top: 10px;
+        }
+        .line1 {
+            @include transform ( rotate(45deg) );
+        }
+        .line2 ,
+        .line3 {
+            @include transform ( rotate(-45deg) );
+        }
+    }
+}
+
+/*==========================================================
+
+                    3. START HEADER STYLESHEET
+
+===========================================================*/
+
+.home {
+    overflow: hidden;
+    .zoominheader {
+        background-image: url(../images/background.jpg);
+        width: 100%;
+        height: 100vh;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-animation: zoomin 10s ease-in infinite;
+        animation: zoomin 10s ease-in infinite;
+        @include animate( all, .5s, ease-in-out );
+    }
+    .zoomoutheader {
+        width:100%;
+        height:100vh;
+        background: none;
+        -webkit-animation: zoomout 10s ease-in infinite;
+        animation: zoomout 10s ease-in infinite;
+        @include animate( all, .5s, ease-in-out );
+    }
+    /* Zoom in Keyframes */
+
+    @-webkit-keyframes zoomin {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.1);}
+        100% {transform: scale(1);}
+    }
+    @keyframes zoomin {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.1);}
+        100% {transform: scale(1);}
+    }
+
+    /* End of Zoom in Keyframes */
+
+    /* Zoom out Keyframes */
+
+    @-webkit-keyframes zoomout {
+        0% {transform: scale(1);}
+        50% {transform: scale(0.8);}
+        100% {transform: scale(1);}
+    }
+    @keyframes zoomout {
+        0% {transform: scale(1);}
+        50% {transform: scale(0.8);}
+        100% {transform: scale(1);}
+    }
+
+    /* End of Zoom out Keyframes */
+    
+    .title {
+        position: absolute;
+        top: 50%;
+        margin-left: 7%;
+        padding: 0;
+        @include transform( translateY(-50%) );
+        z-index: 3;
+        h1 {
+            font-size: 55px;
+            color: #fff;
+        }
+        p {
+            margin-bottom: 33px;
+            letter-spacing: 0.7px;
+            margin-top: -4px;
+            font-size: 22px;
+            color: #fff;
+        }
+        .typed-cursor, .type {
+			height: 200px;
+        }
+        .btn-home {
+            margin-top: 100px;
+            a {
+                color: #fff;
+                padding: 10px 34px;
+                font-size: 15px;
+                letter-spacing: 1.4px;
+                border-radius: 2px;
+                @include animate( all, 200ms, ease-in-out );
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }  
+    }
+}
+
+.home2 {
+    .skewed {
+        position: absolute;
+        right: -45px;
+        top: -11px;
+        width: 49%;
+        height: 100vh;
+        @include transform( skew(-2deg) rotate(2deg) );
+        overflow: hidden;
+        .overlay {
+            display: none;
+        }
+        .my-bg {
+            background-image: url(http://via.placeholder.com/4000x3500);
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
+
+.home3 {
+    .title {
+        margin-left: 4%;
+    }
+    .overlay {
+        position: absolute;
+    }
+    .home-bg {
+        position: absolute;
+        height: 100vh;
+        right: 0;
+        top: 0px;
+        width: 50%;
+        .skewed {
+            @include transform( skew(-15deg) );
+            height: 100vh;
+            width: 55%;
+            position: absolute;
+            left: -230px;
+            background-color: #fff;
+            z-index: 1;
+        }
+        .my-bg {
+            background-image: url(http://via.placeholder.com/4000x3500); /* Here the back image for home 3 */
+            width: 100%;
+            height: 100vh;
+            background-size: 150%;
+            background-position: -80px;
+        }
+    }
+    .image {
+        background-image: url(http://via.placeholder.com/4000x3500); /* Here image for home 3 */
+        width: 460px;
+        height: 310px;
+        position: absolute;
+        left: 46%;
+        top: 50%;
+        @include transform( translate(0%,-50%) );
+        border-radius: 5px;
+        box-shadow: -7px -1px 18px rgba(193, 193, 193, 0.43);
+        z-index: 2;
+    }
+}
+
+/* Start Particles Background */
+
+.home .particles {
+    background-image: url(http://via.placeholder.com/4000x3500); /* Here You Can Edit the image of Header (Background Particles)  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    .title {
+        p,
+        h1 {
+            color: #fff;
+        }
+        .btn-home a {
+            box-shadow: none;
+        }
+    }
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+}
+
+/* End Particles Background */
+
+
+/* Start Slider Background */
+
+.home .slider {
+    height: 100vh;
+    p,
+    h1 {
+        color: #fff;
+    }
+    .btn-home a {
+        box-shadow: none;
+    }
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .slider1 {
+        background-image: url(http://via.placeholder.com/4000x3500); /* Here You Can Edit the image of the Slider 1  */
+        height: 100vh;
+    }
+    .slider2 {
+        background-image: url(http://via.placeholder.com/4000x3500); /* Here You Can Edit the image of the Slider 2  */
+        height: 100vh;
+    }
+    .slider3 {
+        background-image: url(http://via.placeholder.com/4000x3500); /* Here You Can Edit the image of the Slider 3  */
+        height: 100vh;
+    }
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        bottom: 39px;
+        z-index: 99;
+        font-size: 25px;
+        font-weight: lighter;
+        cursor: pointer;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50px;
+        height: 45px;
+        width: 45px;
+        line-height: 48px;
+        text-align: center;
+        padding: 0;
+        @include animate ( all, 500ms, ease-in-out);
+        &:hover {
+            background-color: #FFF;
+            color: #333;
+        }
+    }
+    .slick-prev {
+        right: 160px;
+    }
+    .slick-next {
+        right: 100px;
+    }
+}
+
+/* End Slider Background */
+
+/* Start Youtube Background */
+
+.youtube {
+    #bg-video{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -999;
+    width: 1386px;
+    height: 780px;
+    background-position: center center;
+    }
+    .overlay-video {
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .title {
+        .typed-cursor,
+        p,
+        h1 {
+            color: #fff;
+        }
+        .btn-home a {
+            box-shadow: none;
+        }
+    }
+}
+
+/* End Youtube Background */
+
+/*==========================================================
+
+                    4. ABOUT  NAVBAR STYLESHEET
+
+===========================================================*/
+
+.about {
+    .title {
+        h1 {
+            &:before {
+                content: 'about';
+            }
+        }
+    }
+    .container {
+        overflow: hidden;
+    }
+    .about-img {
+        background-image: url(http://via.placeholder.com/3000x1500); /* Here You can edit your personal image */
+        height: 350px;
+        width: 85%;
+        margin: auto;
+        border-radius: 5px;
+        margin-bottom: 50px;
+        margin-left: -500px;
+        @include animate( all, 500ms, ease-in-out );
+        &.show-img-abt {
+            margin-left: 0;
+        }
+    }
+    .tabs-about {
+        ul {
+            border-bottom: 1px solid #eee;
+        }
+        .tab-content {
+            .tab-pane {
+                padding: 30px 20px 0;
+                p {
+                    font-size: 14px;
+                    color: #666;
+                }
+                .signature {
+                    max-width: 119px;
+                }
+                &.profile {
+                    .title-info {
+                        max-width: 145px;
+                        width: 100%;
+                        display: inline-block;
+                    }
+                    h6 {
+                        padding: 6px 0;
+                        font-size: 15px;
+                        span{
+                            &:last-child {
+                                color: #777;
+                            }
+                        }
+                    }
+                }
+                .btn-about {
+                    text-align: center;
+                    margin-top: 40px;
+                    a {
+                        color: #fff;
+                        padding: 9px 25px;
+                        font-size: 15px;
+                        letter-spacing: 0.5px;
+                        border-radius: 2px;
+                        @include animate( all, 220ms, ease-in-out );
+                    }
+                }
+                .skills {
+                    padding: 0 30px;
+                    .progress-text {
+                        color: #333;
+                        margin-bottom: 8px;
+                        line-height: 18px;
+                        font-size: 14px;
+                        letter-spacing: 0.4px;
+                    }
+                    .progress {
+                        background-color: transparent;
+                        border-radius: 0;
+                        box-shadow: none;
+                        height: 3px;
+                        margin-bottom: 17px;
+                        overflow: visible;
+                        .progress-bar {
+                            float: left;
+                            width: 0;
+                            height: 100%;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #fff;
+                            text-align: center;
+                            position: relative;
+                            -webkit-transition: all 1.5s ease 0.3s;
+                            transition: all 1.5s ease 0.3s;
+                            color: inherit;
+                            opacity: 0;
+                            &:before {
+                                content: attr(data-present);
+                                position: absolute;
+                                right: 0;
+                                top: -24px;
+                                color: inherit;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0; 
+                    }
+                }
+            }
+        }
+        .nav-item {
+            background-color: #fff;
+            margin-bottom: 0;
+            margin: 0 auto 0;
+        }
+        .nav-link {
+            color: #1e1e1e;
+            font-size: 15px;
+            &:hover {
+                border-color: transparent;
+            }
+            i {
+                font-size: 17px;
+                display: block;
+                padding-bottom: 9px;
+                padding-top: 3px;
+                @include animate( all, 220ms, ease-in-out );
+            }
+        }
+        .nav-link.active {
+            background-color: transparent;
+            border: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+}
+
+/*==========================================================
+
+                    4. keynote  NAVBAR STYLESHEET
+
+===========================================================*/
+
+.keynote {
+    .title {
+        h1 {
+            &:before {
+                content: 'Speaking';
+            }
+        }
+    }
+    .container {
+        overflow: hidden;
+    }
+    .tabs-about {
+        ul {
+            border-bottom: 1px solid #eee;
+        }
+        .tab-content {
+            .tab-pane {
+                padding: 30px 20px 0;
+                p {
+                    font-size: 14px;
+                    color: #666;
+                }
+                &.profile {
+                    .title-info {
+                        max-width: 145px;
+                        width: 100%;
+                        display: inline-block;
+                    }
+                    h6 {
+                        padding: 6px 0;
+                        font-size: 15px;
+                        span{
+                            &:last-child {
+                                color: #777;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nav-item {
+            background-color: #fff;
+            margin-bottom: 0;
+            margin: 0 auto 0;
+        }
+        .nav-link {
+            color: #1e1e1e;
+            font-size: 15px;
+            &:hover {
+                border-color: transparent;
+            }
+            i {
+                font-size: 17px;
+                display: block;
+                padding-bottom: 9px;
+                padding-top: 3px;
+                @include animate( all, 220ms, ease-in-out );
+            }
+        }
+        .nav-link.active {
+            background-color: transparent;
+            border: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+}
+
+/*==========================================================
+
+                    4. educational  NAVBAR STYLESHEET
+
+===========================================================*/
+
+.educational {
+    .title {
+        h1 {
+            &:before {
+                content: 'Consulting';
+            }
+        }
+    }
+    .container {
+        overflow: hidden;
+    }
+}
+
+
+/*==========================================================
+
+                    5. SERVICES HEADER STYLESHEET
+
+===========================================================*/
+
+.serv {
+    .title {
+        h1 {
+            &:before {
+                content: 'services';
+            }
+        }
+    }
+    .content {
+        margin-bottom: 40px;
+        padding-left: 10px;
+        img {
+            max-width: 50px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            letter-spacing: 0.3px;
+        }
+    }
+    .serv-vid {
+        background-image: url(http://via.placeholder.com/2500x1500);
+        width: 90%;
+        height: 90%;
+        border-radius: 4px;
+        margin: auto;
+        position: relative;
+        .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #fff;
+            width: 140px;
+            height: 45px;
+            border-radius: 50px;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            @include animate( all, 320ms, ease-in-out );
+            &:hover {
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/*==========================================================
+
+                    5. COURSES HEADER STYLESHEET
+
+===========================================================*/
+
+.course {
+    .title {
+        h1 {
+            &:before {
+                content: 'courses';
+            }
+        }
+    }
+    .content {
+        margin-bottom: 40px;
+        padding-left: 10px;
+        img {
+            max-width: 50px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            letter-spacing: 0.3px;
+        }
+    }
+    
+	.btn-contact-course {
+		text-align: center;
+		margin-top: 40px;
+		a {
+			color: #fff;
+			padding: 9px 25px;
+			font-size: 15px;
+			letter-spacing: 0.5px;
+			border-radius: 2px;
+			@include animate( all, 220ms, ease-in-out );
+		}
+	}
+}
+
+
+/*==========================================================
+
+                    5. Awards and Features HEADER STYLESHEET
+
+===========================================================*/
+
+.awards {
+    .content {
+        margin-bottom: 40px;
+        padding-left: 10px;
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            letter-spacing: 0.3px;
+        }
+    }
+}
+
+
+/*==========================================================
+
+                    6. START PORTFOLIO STYLESHEET
+
+===========================================================*/
+
+.work {
+    .title {
+        h1 {
+            &:before {
+                content: 'Humanitarian Work';
+            }
+        }
+    }
+    .shuffle {
+        margin-bottom: 40px;
+        ul {
+            text-align: center;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+                padding: 5px 18px;
+                border-radius: 25px;
+                font-size: 15px;
+                &.active {
+                    color: #FFF;
+                    box-shadow: 0px 1px 8px #ddd;
+                    @include animate( all, 320ms, ease-in-out );
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .gallery {
+        .item {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @include animate( all, 320ms, ease-in-out );
+            .over {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #FFF;
+                background-color: rgba(0,0,0,0.6);
+                opacity: 0;
+                z-index: 1;
+                @include animate( all, 320ms, ease-in-out );
+                .info-img {
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    right: 12px;
+                    text-align: left;
+                    h4 {
+                        font-size: 24px;
+                    }
+                    span {
+                        font-size: 14px;
+                        letter-spacing: 0.8px;
+                    }
+                }
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+            img {
+                @include animate( all, 600ms, ease-in-out );
+                @include transform( scale(1) );
+            }
+            &:hover {
+                img {
+                    width: 100%;
+                    @include transform( scale(1.2) );
+                }
+                .over {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*==========================================================
+
+                    6. START SPEAKING STYLESHEET
+
+===========================================================*/
+
+.speaking {
+    .title {
+        h1 {
+            &:before {
+                content: 'Speaking';
+            }
+        }
+    }
+    .shuffle {
+        margin-bottom: 40px;
+        ul {
+            text-align: center;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+                padding: 5px 18px;
+                border-radius: 25px;
+                font-size: 15px;
+                &.active {
+                    color: #FFF;
+                    box-shadow: 0px 1px 8px #ddd;
+                    @include animate( all, 320ms, ease-in-out );
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .gallery {
+        .item {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @include animate( all, 320ms, ease-in-out );
+            .over {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #FFF;
+                background-color: rgba(0,0,0,0.6);
+                opacity: 0;
+                z-index: 1;
+                @include animate( all, 320ms, ease-in-out );
+                .info-img {
+                    position: absolute;
+                    top: 20%;
+                    left: 20px;
+                    right: 20px;
+                    text-align: left;
+                    h4 {
+                        font-size: 34px;
+                    }
+                    span {
+                        font-size: 17px;
+                        letter-spacing: 0.8px;
+                    }
+                }
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    font-size: 21px;
+                    color: #fff;
+                }
+            }
+            img {
+                @include animate( all, 600ms, ease-in-out );
+                @include transform( scale(1) );
+            }
+            &:hover {
+                img {
+                    width: 100%;
+                    @include transform( scale(1.2) );
+                }
+                .over {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+	
+	.btn-contact-speaking {
+		text-align: center;
+		margin-top: 40px;
+		a {
+			color: #fff;
+			padding: 9px 25px;
+			font-size: 15px;
+			letter-spacing: 0.5px;
+			border-radius: 2px;
+			@include animate( all, 220ms, ease-in-out );
+		}
+	}
+}
+
+
+/*==========================================================
+
+                    7. START TESTIM STYLESHEET
+
+===========================================================*/
+
+.testim {
+    .title {
+        h1 {
+            &:before {
+                content: 'Testimonials';
+            }
+        }
+    }
+    .tabbable {
+        position: relative;
+        .list-tabs {
+            position: absolute;
+            left: 50%;
+            top: -23%;
+            @include transform ( translate(-50%,0) );
+            ul {
+                border: none;
+                position: relative;
+                li {
+                    margin-left: 10px;
+                    position: absolute;
+                    &:first-child{
+                        margin-left: 0px;
+                        right: 93px;
+                        top: 100px;
+                    }
+                    &:nth-child(2) {
+                        right: 53px;
+                        top: 40px;
+                    }
+                    &:nth-child(3) {
+                        right: -24px;
+                        top: 14px;
+                    }
+                    &:nth-child(4) {
+                        left: 40px;
+                        top: 40px;
+                    }
+                    &:nth-child(5) {
+                        left: 83px;
+                        top: 100px;
+                    }
+                    img {
+                        max-width: 90px;
+                    }
+                }
+            }
+        }
+        .image-tab {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            &.image-testim1 {
+                background-image: url(http://via.placeholder.com/3000x2000);
+            }
+            &.image-testim2 {
+                background-image: url(http://via.placeholder.com/3000x2000);
+            }
+            &.image-testim3 {
+                background-image: url(http://via.placeholder.com/3000x2000);
+            }
+            &.image-testim4 {
+                background-image: url(http://via.placeholder.com/3000x2000);
+            }
+            &.image-testim5 {
+                background-image: url(http://via.placeholder.com/3000x2000);
+            }
+        }
+        .tab-content {
+            margin: auto;
+            margin-bottom: 70px;
+            .tab-pane {
+                margin-top: 50px;
+            }
+            .profile-image {
+                .image-tab {
+                    height: 160px;
+                    width: 160px;
+                    margin: auto;
+                    margin-top: 15px;
+                }
+            }
+            .profile-details {
+                text-align: center;
+                border: 1px solid #b0914f;
+                height: 244px;
+                width: 50%;
+                margin: auto;
+                border-radius: 5px;
+                margin-top: -78px;
+                padding: 83px 0;
+                position: relative;
+                z-index: -1;
+                i {
+                    position: absolute;
+                    font-size: 23px;
+                    &.fa-quote-left {
+                        left: 50px;
+                        top: 30px;
+                    }
+                    &.fa-quote-right {
+                        right: 50px;
+                        bottom: 30px;
+                    }
+                }
+                p {
+                    font-size: 15px;
+                    font-style: italic;
+                    padding-top: 10px;
+                    margin: 3px 16% 10px;
+                }
+                h4 {
+                    font-size: 19px;
+                    font-weight: 600;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+    .client {
+        background-image: url(http://via.placeholder.com/3000x2000);
+        width: 100%;
+        position: relative;
+        .overlay-cl {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .logos {
+            position: relative;
+            text-align: center;
+            padding: 40px;
+            img {
+                max-width: 60px;
+            }
+        }
+    }
+}
+
+
+/*==========================================================
+
+                    9. SERVICES CONTACT STYLESHEET
+
+===========================================================*/
+
+.contact {
+    overflow: hidden;
+    .title {
+        h1 {
+            &:before {
+                content: 'contact';
+            }
+        }
+    }
+    .form {
+        padding: 0 30px;
+        .form-group {
+            textarea,
+            input {
+                border: none;
+                border-radius: 0;
+                width: 90%;
+                text-align: left;
+                margin: auto;
+                font-size: 14px;
+                margin-bottom: 22px;
+                &::placeholder {
+                    color: #bbb;
+                }
+            }
+            textarea {
+                width: 95%;
+                height: 100px;
+                resize: none;
+            }
+        }
+        .message {
+			.btn-home {
+				float: right;  
+				margin: 8px 10px;  
+			}
+            .send-btn {
+                color: #fff;
+                padding: 6px 16px 8px 0px;
+                border-radius: 2px;
+                margin-left: 12px;
+                cursor: pointer;
+                position: relative;
+                input.btn {
+                    color: #fff;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    font-size: 14px;
+                    position: relative;
+                    padding: 9px 20px;
+                    border-radius: 2px;
+                    letter-spacing: 0.6px;
+                }
+                i {
+                    margin-left: -35px;
+                    @include animate( all, 420ms, ease-in-out );
+                }
+                &:hover {
+                    i {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .infos {
+        height: 95%;
+        width: 100%;
+        box-shadow: -3px 6px 23px rgba(144, 144, 144, 0.46);
+        border-radius: 4px;
+        padding: 50px;
+        position: relative;
+        color: #fff;
+        h2 {
+            position: absolute;
+            right: 0;
+            top: 65px;
+            font-size: 125px;
+            transform: rotate(38deg);
+            color: rgba(255, 255, 255, 0.11);
+            font-weight: 100;
+        }
+        .email,
+        .phone,
+        .address {
+            padding: 18px 20px;
+            a,
+            span {
+                color: #fff;
+                font-size: 15px;
+                letter-spacing: 0.5px;
+                margin-left: 13px;
+            }
+        }
+    }
+	.contact .btn-home a {
+		color: #fff;
+		padding: 10px 34px;
+		font-size: 15px;
+		letter-spacing: 1.4px;
+		border-radius: 2px;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-ms-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out; 
+	}	
+	.home .title .btn-home a:hover {
+		box-shadow: none; 
+	}	
+}
+
+
+
+/* Start Map */
+
+.google-wrapper {
+    position: relative;
+}
+
+#google-map,
+.contact iframe {
+    border: 0;
+    width: 100%;
+    height: 430px;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+      -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+}
+
+.scrolloff {
+    pointer-events: none;
+}
+
+.maps {
+    padding: 0!important;
+//    margin-top: 50px;
+    margin-top: 80px;
+    overflow: hidden;
+    margin-bottom: -495px;
+    @include animate( all, 420ms, ease-in-out );
+    &.opend {
+        margin-bottom: 0;
+    }
+    .open-map {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: #b0914f;
+        color: #fff;
+        cursor: pointer;
+        span {
+            letter-spacing: 0.8px;
+            font-size: 15px;
+            display: none;
+            i {
+                margin-right: 7px;
+            }
+        }
+        .active {
+            display: block;
+        }
+    }
+}
+
+/* End Map */
+
+
+/*==========================================================
+
+                    10. SERVICES FOOTER STYLESHEET
+
+===========================================================*/
+
+footer {
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding: 25px;
+    margin-top: 65px;
+    position: relative;
+    background-color: #fff;
+    @include animate( all, 420ms, ease-in-out );
+    &.opend {
+        margin-top: 0;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 12px;
+        padding-bottom: 5px;
+        text-align: center;
+        a {
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+}
+
+/* Start Section Tool Box */
+
+.option-box {
+    position: fixed;
+    top: 120px;
+    right: 0;
+    z-index: 9999;
+    text-align: center;
+    padding: 0;
+    .color-option {
+        position: fixed;
+        right: -185px;
+        background-color: #fff;
+        width: 180px;
+        box-shadow: 0px 2px 9px rgba(177, 177, 177, 0.2);
+        ul {
+            margin: 12px auto 9px;
+            padding: 6px 19px;
+            li {
+                width: 23px;
+                height: 23px;
+                display: inline-block;
+                margin-right: 14px;
+                cursor: pointer;
+                border-radius: 50%;
+                border: 1px solid #555;
+                span {
+                    display: block;
+                    margin: 25px -7px;
+                }
+                &:nth-child(3),
+                &:nth-child(5) {
+                    margin-right: 0;
+                }
+            }
+        }
+        .dl li {
+            margin: 6px 14px;
+        }
+    }
+    .gear-check {
+        padding: 6px 19px;
+        color: #333;
+        cursor: pointer;
+        background-color: #FFF;
+        font-size: 25px;
+        border-radius: 2px 0 0 2px;
+        box-shadow: 0px 2px 9px rgba(177, 177, 177, 0.2);
+    }
+}
+
+/* End Section Tool Box */
+
+/* Start Loading */
+
+.loading {
+    background-color: #FFF;
+    color: #444;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+.blob {
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0,0,0,0.85);
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: calc(50% - 1rem);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.25);
+}
+
+.blob-2 { animation: animate-to-2 1.5s infinite; }
+.blob-3 { animation: animate-to-3 1.5s infinite; }
+.blob-1 { animation: animate-to-1 1.5s infinite; }
+.blob-4 { animation: animate-to-4 1.5s infinite; }
+.blob-0 { animation: animate-to-0 1.5s infinite; }
+.blob-5 { animation: animate-to-5 1.5s infinite; }
+
+@keyframes animate-to-2 {
+    25%, 75% { transform: translateX(-1.5rem) scale(0.75); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-3 {
+    25%, 75% { transform: translateX(1.5rem) scale(0.75); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-1 {
+    25% { transform: translateX(-1.5rem) scale(0.75); }
+    50%, 75% { transform: translateX(-4.5rem) scale(0.6); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-4 {
+    25% { transform: translateX(1.5rem) scale(0.75); }
+    50%, 75% { transform: translateX(4.5rem) scale(0.6); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-0 {
+    25% { transform: translateX(-1.5rem) scale(0.75); }
+    50% { transform: translateX(-4.5rem) scale(0.6); }
+    75% { transform: translateX(-7.5rem) scale(0.5); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+@keyframes animate-to-5 {
+    25% { transform: translateX(1.5rem) scale(0.75); }
+    50% { transform: translateX(4.5rem) scale(0.6); }
+    75% { transform: translateX(7.5rem) scale(0.5); }
+    95% { transform: translateX(0rem) scale(1); }
+}
+
+/* End Loading */

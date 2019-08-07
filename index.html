@@ -1,0 +1,834 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!-- meta Data -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- title -->
+        <title>CARLA CUGLIETTA</title>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/light_template.css" />
+        <link rel="stylesheet" href="css/colors/default-color.css" />
+        
+        <!-- Plugins -->
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <script>
+            // Ajax function
+            
+            function _(id) {
+
+                return document.getElementById(id);
+
+            }
+
+            function submitForm() {
+
+                _("btn").disabled = true;
+                _("status").innerHTML = 'please wait ...';
+
+                var formdata = new FormData(),
+                    ajax = new XMLHttpRequest();
+
+                formdata.append("name", _("name").value);
+                formdata.append("email", _("email").value);
+                formdata.append("phone", _("phone").value);
+                formdata.append("subject", _("subject").value);
+                formdata.append("msg", _("msg").value);
+
+                ajax.open("POST", "contact.php");
+                ajax.onreadystatechange = function () {
+
+                    if (ajax.readyState === 4 && ajax.status === 200) {
+
+                        if (ajax.responseText === "success") {
+
+                            _("my_form").innerHTML = '<p>Thanks ' + _("name").value + ',<br> Your message has been sent.</p>';
+
+                        } else {
+
+                            _("status").innerHTML = ajax.responseText;
+                            _("btn").disabled = false;
+
+                        }
+                    }
+                };
+
+                ajax.send(formdata);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <!-- Start Section Tool Box -->
+        
+        <div class="option-box">
+            <div class="color-option">
+                <ul class="list-unstyled colors">
+                    <li data-value="css/colors/default-color.css"></li>
+                    <li data-value="css/colors/green-color.css"></li>
+                    <li data-value="css/colors/pink-color.css"></li>
+                    <li data-value="css/colors/blue-color.css"></li>
+                    <li data-value="css/colors/purple-color.css"></li>
+                </ul>
+                <ul class="list-unstyled dl">
+                    <li class="dark-template" data-value="css/dark_template.css"> <span>Dark</span> </li>
+                    <li class="light-template" data-value="css/light_template.css"> <span>Light</span> </li>
+                </ul>
+            </div>
+            <div class="gear-check">
+                <i class="fas fa-cog fa-spin"></i>
+            </div>
+        </div>
+        
+        <!-- End Section Tool Box -->
+        
+        <!-- Start Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+                
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="menu">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li id="home" class="nav-item active-nav">
+                            <a href="#home-cont" data-value="home-cont">
+                            <i class="icon-home" hidden></i>
+                                <span class="name-menu">Home</span>
+                            </a>
+                        </li>
+                        <li id="about" class="nav-item">
+                            <a href="#about-cont" data-value="about-cont">
+                            <i class="icon-male-user" hidden></i>
+                                <span class="name-menu">About</span>
+                            </a>
+                        </li>
+                        <li id="speaking" class="nav-item">
+                            <a href="#speaking-cont" data-value="speaking-cont">
+                            <i class="icon-male-user" hidden></i>
+                                <span class="name-menu">Keynote Speaker</span>
+                            </a>
+                        </li>
+                        <li id="educational" class="nav-item">
+                            <a href="#educational-cont" data-value="educational-cont">
+                            <i class="icon-male-user" hidden></i>
+                                <span class="name-menu">Consulting</span>
+                            </a>
+                        </li>
+                        <li id="co-founder" class="nav-item">
+                            <a href="http://youngleaders.world/" target="_blank">
+                            <i class="icon-youngleaders" hidden></i>
+                                <span class="name-menu">Co-Founder</span>
+                            </a>
+                        </li>
+                        <li id="work" class="nav-item">
+                            <a href="#work-cont" data-value="work-cont">
+                            <i class="icon-picture" hidden></i>
+                                <span class="name-menu">Humanitarian Work</span>
+                            </a>
+                        </li>
+                        <li id="contact" class="nav-item">
+                            <a href="#contact-cont" data-value="contact-cont">
+                            <i class="icon-envelope" hidden></i>
+                                <span class="name-menu">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/carlacuglietta" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- You Can Edit the link here -->
+                    <a href="https://twitter.com/carlacuglietta" target="_blank"><i class="fab fa-twitter"></i></a> <!-- You Can Edit the link here -->
+                    <a href="https://www.tumblr.com/carlacuglietta" target="_blank"><i class="fab fa-tumblr"></i></a> <!-- You Can Edit the link here -->
+                    <a href="https://www.youtube.com/carlacuglietta" target="_blank"><i class="fab fa-youtube"></i></a> <!-- You Can Edit the link here -->
+                    <a href="https://www.instagram.com/carlacuglietta" target="_blank"><i class="fab fa-instagram"></i></a> <!-- You Can Edit the link here -->
+                </div>
+                <div class="collapse-menu">
+                    <span class="collapse-icon closed-menu"></span>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-toggle">
+            <div class="menu">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+        </div>
+        <!-- End Navbar -->
+        
+        <!-- Start Header -->
+        
+        <section id="home-cont" class="home1 home">
+            <div class="zoominheader bg-image">
+                <div class="overlay"></div>
+                <div class="zoomoutheader"></div>
+            </div>
+            <div class="title">
+                <h1 class="text-uppercase"><strong>CARLA</strong> CUGLIETTA</h1>
+                <p class="type"></p>  <!-- You Can Edit the title on the custom.js File -->
+                <div class="btn-home">
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Header -->
+        
+        
+        <!-- Start About -->
+        <section id="about-cont" class="about">
+            <div class="title">
+                <h1>About</h1>
+            </div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+						<br />
+						<br />
+						<br />
+						<br />
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/GlitGYR3JnU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+                        <!-- go to main.scss file to edit personal image -->
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="tabs-about">
+                            <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                                
+                                <!-- Start About Me Title Tab -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="about-tab" data-toggle="tab" href="#aboutme" role="tab" aria-controls="about" aria-expanded="true">
+                                        <i class="icon-male-user"></i>
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <!-- End About Me Title Tab -->
+                                
+                                <!-- ================ -->
+                                
+                                <!-- Start Profile Title Tab -->
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">
+                                        <i class="icon-star"></i>
+                                        <span>Inspiration</span>
+                                    </a>
+                                </li>
+                                <!-- End Profile Title Tab -->
+                                
+                                <!-- ================ -->
+                                
+                                <!-- Start Skills Title Tab -->
+                                <li class="nav-item">
+                                    <a class="nav-link" id="skill-tab" data-toggle="tab" href="#skill" role="tab" aria-controls="skill">
+                                        <i class="icon-magic-wand"></i>
+                                        <span>Awards and Features</span>
+                                    </a>
+                                </li>
+                                <!-- End Skills Title Tab -->
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                
+                                <!-- Start About Me Tab -->
+                                <div class="tab-pane fade show active text-left" id="aboutme" role="tabpanel" aria-labelledby="about-tab">
+                                    <p>Carla Cuglietta is the Co-Founder of <a href="http://youngLeaders.world">YoungLeaders.World</a>, a non-profit global organization, aimed to engage young people for personal growth and collective good. Carla has worked as an educator, consultant and speaker in Canada, India, China, Sierra Leone and Uganda training over 10,000 people in the areas of engagement and leadership. She has been awarded the Prime Minister's Certificate of Excellence, the University of Alberta Alumni of Distinction, YWCA Woman of Distinction Award and the Lions Club International Humanitarian Award for her work around the world.</p> 
+									<p>Carla works with organizations to help engage the next gen into the work place in a way that is beneficial to both the employee and the organization.</p> 
+                                    <!-- Here image Signature -->
+                                </div>
+                                <!-- End About Me Tab -->
+                                
+                                <!-- ================ -->
+                                
+                                <!-- Start Profile Tab -->
+                                <div class="tab-pane fade text-left profile" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+									<p>Carla has spent a large part of the last two decades trying to meet and learn from extraordinary change-makers all over the world. Her focus is to explore the critical decision points in their lives to understand how positive change is instigated, led and implemented.</p> 
+
+									<p>Through this work, Carla has been inspired to educate youth and adults to get them on a path of personal growth and collective good by defining clear, positive visions for their lives.</p>                                    
+                                </div>
+                                <!-- End Profile Tab -->
+                                
+                                <!-- ================ -->
+                                
+                                <!-- Start Skills Tab -->
+                                <div class="tab-pane fade skill" id="skill" role="tabpanel" aria-labelledby="skill-tab">
+									<div class="container">
+										<div class="awards">
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/lions-club.jpg" alt="Lions Club Logo" />
+														<h4>Lions Club</h4>
+														<p>Lions Club International Melvin Jones Humanitarian Award.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/canada-government.jpg" alt="Government of Canada Logo" />
+														<h4>Government of Canada</h4>
+														<p>Prime Minister of Canada Certificate of Achievement for Youth Engagement.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/alberta-alumni.jpg" alt="University of Alberta Alumni Logo" />
+														<h4>University of Alberta Alumni</h4>
+														<p>The University of Alberta Alumni of Distinction from the Faculty of Education.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/ywca-canada.jpg" alt="YWCA Canada Logo" />
+														<h4>YWCA Canada</h4>
+														<p>YWCA Woman of Distinction Award. Women of Distinction – Volunteer.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/me-to-we.jpg" alt="Me to We Logo" />
+														<h4>Me to We</h4>
+														<p>Me to We Outstanding Educator Award.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/canadian-living.jpg" alt="Canadian Living Logo" />
+														<h4>Canadian Living</h4>
+														<p>Featured in Canadian Living Magazine.</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-12">
+													<div class="content">
+														<img src="images/yegpeople.jpg" alt="YEGPEOPLE Logo" />
+														<h4>YEGPEOPLE</h4>
+														<p>Featured in YEGPEOPLE.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <!-- End Skills Tab -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End About -->
+        
+        <!-- Start Speaking -->
+        <section id="speaking-cont" class="speaking">
+            <div class="title">
+                <h1>Speaking</h1>
+            </div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <img class="img-fluid" src="images/speaking.jpg" width="1600" height="1200"> 
+                        <!-- go to main.scss file to edit personal image -->
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="tabs-about">
+                            <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                                
+                                <!-- Start About Me Title Tab -->
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="about-tab" data-toggle="tab" href="#aboutme" role="tab" aria-controls="about" aria-expanded="true">
+                                        <i class="icon-male-user"></i>
+                                        <span>Keynote</span>
+                                    </a>
+                                </li>
+                                <!-- End Speaking Title Tab -->
+                                
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                
+                                <!-- Start Speaking Tab -->
+                                <div class="tab-pane fade show active text-left" id="aboutme" role="tabpanel" aria-labelledby="about-tab">
+                                    <p>Carla has spoken to thousands of people of all age groups on three continents. Her focus areas include: Personal Leadership, Next-Gen Engagement and Educational Change.</p> 
+									<p>Her stories, experiences and lessons from around the world ignite audience members to not just be inspired by change, but to make it happen.</p>
+                                </div>
+                                <!-- End Speaking Tab -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br />
+			<br />
+			<div class="container">
+				<div class="gallery">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 2rem;">
+							<h2>Keynote and Workshop Topics:</h2>
+						</div>
+					</div>
+					<div class="row">
+						<!-- Start Image Number 1 -->
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="section-title" style="height: 4rem;">
+								<h4>Leadership. Setting Vision and Direction</h4>
+							</div>
+							<div class="item">
+								<div class="over">
+									<div class="info-img">
+										<p>Carla uses concrete examples of personal leadership all-stars who have used the power of vision setting to bring themselves and their communities to reach their fullest potential.</p>
+									</div>
+									<a class="image" href="images/fireworks.jpg">
+											<!-- ^ And Here -->
+										<i class="fa fa-arrows-alt"></i>
+									</a>
+								</div>
+								<img src="images/fireworks.jpg" alt="Fireworks" class="img-fluid">
+										<!-- Here ^ You Can Change image And Up -->
+							</div>
+						</div>
+						<!-- End Image Number 1 -->
+						<!-- ===================== -->
+						<!-- Start Image Number 2 -->
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="section-title" style="height: 4rem;">
+								<h4>Engaging Next Gen</h4>
+							</div>
+							<div class="item graphic">
+								<div class="over">
+									<div class="info-img">
+										<p>Carla has worked on 3 different continents with next gen, organizations, and schools to tackle the same challenge; keeping the young people engaged in learning, work and life.</p> 
+										
+										<p>Carla has provided leadership and engagement training to over 11, 000 young people over the past 3 years. She works with schools and organizations to facilitate increased engagement in students and early career workforce.  Carla believes that engagement is the key to unlocking the discretionary effort needed for future success.</p>
+									</div>
+									<a class="image" href="images/nextgen.jpg">
+											<!-- ^ And Here -->
+										<i class="fa fa-arrows-alt"></i>
+									</a>
+								</div>
+								<img src="images/nextgen.jpg" alt="Next Gen" class="img-fluid">
+										<!-- Here ^ You Can Change image And Up -->
+							</div>
+						</div>
+						<!-- End Image Number 2 -->
+						<!-- ===================== -->
+						<!-- Start Image Number 3 -->
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="section-title" style="height: 4rem;">
+							<h4>Leadership with Global Insights</h4>
+							</div>
+							<div class="item web">
+								<div class="over">
+									<div class="info-img">
+										<p>Over the 18 years Carla has been involved in humanitarian work in Sierra Leone, China, India, Uganda, Mexico, Costa Rica and Laos.  Her goal is to learn from and work with local change makers to help raise people out of poverty.  These partnerships tackle the root causes of poverty by focusing on education, access to water, and rights for women.  Carla will weave together lessons with incredible stories of growth and triumph and help people understand how they too can make a difference in their communities.</p>
+									</div>
+									<a class="image" href="images/head-covered.jpg">
+											<!-- ^ And Here -->
+										<i class="fa fa-arrows-alt"></i>
+									</a>
+								</div>
+								<img src="images/head-covered.jpg" alt="Carla Cuglietta" class="img-fluid">
+										<!-- Here ^ You Can Change image And Up -->
+							</div>
+						</div>
+						<!-- End Image Number 3 -->
+						<!-- You can add more images here.. -->
+					</div>
+				</div>
+				<br />
+                <div class="btn-contact-speaking">
+                    <a href="#contact-cont">Contact us to find out about Carla speaking at your next event or school</a>
+                </div>				
+				<br />
+			</div>				
+        </section>
+        
+        <!-- End Speaking -->
+        
+        <!-- Start Educational -->
+        <section id="educational-cont" class="educational">
+            <div class="title">
+                <h1>Consulting</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12" style="margin: 1rem 0;">
+						<h2>Next Gen in the Workplace</h2>
+					</div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="images/next-gen-workplace.jpg" width="97%" height="333" /> 
+                        <!-- go to main.scss file to edit personal image -->
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+						<p>What if the biggest factor shaping the future success of communities, organizations and workers is whether we can engage one person at a time? What if unlocking discretionary effort is the key? Numerous studies point to findings just like that. If people fully engage in their activities, the future looks bright. If they don't, quite the opposite. The challenge is, engagement levels are perilously low, and the issue has particular impact on emerging workers and employees. Carla will share her findings and insights on how to best engage the next generation of employees in your workplace.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12" style="margin: 1rem 0;">
+					</div>
+                </div>
+                
+                <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12" style="margin: 1rem 0;">
+						<h2>Educational Consulting</h2>
+					</div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="images/educational-consultant.jpg" width="97%" height="333" /> 
+                        <!-- go to main.scss file to edit personal image -->
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+						<p>Carla worked in both the private and public education systems throughout the last sixteen years.</p>
+						
+						<p>Carla has been involved in projects aimed at educational transformation. She has worked and developed curriculum for traditional programming, online programming, self-directed learning, project-based learning and flipped classroom models.</p>
+						
+						<p>Her experience ranges from working with teachers in Sierra Leone and Uganda to achieve gender equity and peace in the classrooms, to being involved in curriculum redesigns in progressive 21st Century Learning schools.</p>  
+						
+						<p>Whether in Africa, Asia and North America, Carla works to tackle the same challenge; keeping young people engaged in learning and in life.</p>
+
+						<p>Carla’s wide-ranging experiences continue to push her to apply global learning in local contexts.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Educational -->
+        
+        
+        <!-- Start Courses -->
+        <section id="course-cont" class="course">
+            <div class="title">
+                <h1>Courses</h1>
+            </div>
+            <div class="container">
+				<div class="servs">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="content">
+								<img src="images/globe.jpg" alt="Globe" />
+								<h4>International Courses</h4>
+								<p>Carla runs International Personal Growth experiences in India, Sierra Leone, Canada and China connecting with people who want to learn more about a life of personal growth and collective good.</p>  
+
+								<p>Each International Personal Growth experience contains no more than 10 people to ensure authentic, personal, meaningful learning can take place and lead to life long change.</p> 
+
+								<p>Here are some upcoming opportunities:</p>
+								<p><a target="_blank" href="Legacy-India-Program.pdf">Legacy – India</a></p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="content">
+								<img src="images/young-leaders.png" alt="Young Leaders" />
+								<h4>Youth Leadership Courses</h4>
+								<p>Students aged 13-21 are invited to sign up for this Personal Leadership and Collective Good course designed to take only minutes per day that open doors for you to completely change and redirect the path you are on.</p>
+								<p><a href="http://youngleaders.world/">Register Now</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="content">
+								<div class="btn-contact-course">
+									<a href="#contact-course-cont">Contact For More Information</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        
+        <!-- End Services -->
+        
+        
+        <!-- Start Work -->
+        <section id="work-cont" class="work">
+            <div class="title">
+                <h1>Humanitarian Work</h1>
+            </div>
+            <div class="container">
+                <div class="gallery">
+                    <div class="row">
+                        <!-- Start Image Number 1 -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+							<h4>Engaging Youth</h4>
+                            <div class="item">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <p>Carla is the Co-Founder of YoungLeaders.World an organization dedicated to helping young people understand and prepare for important decisions coming up in their lives.  With over 10,000 students reached with YL.W content, Carla continues to work towards providing opportunities to learn and grow personally and collectively for young people all over the world.</p> 
+
+										<p>YoungLeaders.World Summits range in size from 200-2000 students and have incredible energy and impact! Students leave with an understanding of the power that personal leadership through vision setting can have in their life.</p>
+                                    </div>
+                                    <a class="image" href="images/youth.jpg">
+                                            <!-- ^ And Here -->
+                                        <i class="fa fa-arrows-alt"></i>
+                                    </a>
+                                </div>
+                                <img src="images/youth.jpg" alt="Engaging and Inspiring Youth" class="img-fluid">
+                                        <!-- Here ^ You Can Change image And Up -->
+                            </div>
+                        </div>
+                        <!-- End Image Number 1 -->
+                        <!-- ===================== -->
+                        <!-- Start Image Number 2 -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+							<h4>Partnering with Women</h4>
+                            <div class="item graphic">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <p>Over the last decade Carla has worked to help 1850 women and their families lift themselves out of poverty in India and Sierra Leone through clean water initiatives and personal leadership opportunities.</p>
+										<p>Fundraising initiatives at home in Canada through generous donors of HOPE International Development Agency and helping to fund other grassroots movements, women in India and Sierra Leone have been able to provide for their families and break the cycle of poverty.</p>
+                                    </div>
+                                    <a class="image" href="images/women-in-india.jpg">
+                                            <!-- ^ And Here -->
+                                        <i class="fa fa-arrows-alt"></i>
+                                    </a>
+                                </div>
+                                <img src="images/women-in-india.jpg" alt="Women in India" class="img-fluid">
+                                        <!-- Here ^ You Can Change image And Up -->
+                            </div>
+                        </div>
+                        <!-- End Image Number 2 -->
+                        <!-- ===================== -->
+                        <!-- Start Image Number 3 -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+							<h4>Peace Education</h4>
+                            <div class="item web">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <p>Carla worked with local teachers in Sierra Leone and Uganda through the Canadian Teachers Federation to explore bringing peaceful and gender equitable practices to rural classroom environments.</p>
+                                    </div>
+                                    <a class="image" href="images/peace-hut.jpg">
+                                            <!-- ^ And Here -->
+                                        <i class="fa fa-arrows-alt"></i>
+                                    </a>
+                                </div>
+                                <img src="images/peace-hut.jpg" alt="Peace Hut" class="img-fluid">
+                                        <!-- Here ^ You Can Change image And Up -->
+                            </div>
+                        </div>
+                        <!-- End Image Number 3 -->
+                        <!-- ===================== -->
+                        <!-- Start Image Number 4 -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+							<h4>Local Community Project</h4>
+                            <div class="item marketing">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <p>Carla has been volunteering as well as encouraging youth to get involved in local organizations that support new Canadians, homelessness and displaced families in her community for 25 years. Starting at just 15 years old, Carla has been encouraging young people to volunteer with her in local community projects. She also provides opportunities and venues for organizations to connect with youth.</p>
+                                    </div>
+                                    <a class="image" href="images/crowd.jpg">
+                                            <!-- ^ And Here -->
+                                        <i class="fa fa-arrows-alt"></i>
+                                    </a>
+                                </div>
+                                <img src="images/crowd.jpg" alt="Local Community Projects" class="img-fluid"> 
+                                        <!-- Here ^ You Can Change image And Up -->
+                            </div>
+                        </div>
+                        <!-- End Image Number 4 -->
+                        <!-- You can add more images here.. -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- End Work -->
+                
+        <!-- Start Contact -->
+        <section id="contact-cont" class="contact">
+            <div class="title">
+                <h1 class="kaushan">Contact</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="form">
+						<h4>Contact Carla about speaking at your event, school or organization.</h4>
+                        <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="name" class="form-control" type="text" name="name" placeholder="Your Name" required/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="email" class="form-control" type="email" name="email" placeholder="Your Email" required/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="phone" class="form-control" type="tel" name="phone" placeholder="Your Phone"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="subject" class="form-control" type="text" name="subject" placeholder="Subject"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="form-group">
+                                    <textarea id="msg" class="form-control" placeholder="Write Your message here ..." required></textarea>
+                                </div>
+                                <p>
+                                    <span class="send-btn">
+                                        <input id="btn" class="btn" type="submit" value="Send Message" /><i class="fas fa-long-arrow-alt-right"></i>
+                                    </span>
+                                    <span id="status"></span>
+									<span class="btn-home">
+										<a href="Carla Cuglietta presentation package.pdf" target="_blank">Work with Carla</a>
+									</span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="infos background-gradient">
+                        <h2 class="text-uppercase kaushan">Carla</h2>
+                        <div class="email">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:carla@youngleaders.world">carla@youngleaders.world</a>
+                        </div>
+                        <div class="phone">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+17806609000">1.780.660.9000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="maps" id="overlay">
+                <div class="open-map">
+                    <span class="o-map active"><i class="fas fa-arrow-alt-circle-down"></i>Open Map</span>
+                    <span class="c-map"><i class="fas fa-arrow-alt-circle-up"></i>Close Map</span>
+                </div>
+                <div class="google-wrapper">
+                    <div id="google-map"> <!-- You Can Add Your Location Here Just Go To Google Map And Emped Map and past it down v -->
+                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162778.81964475298!2d-73.93891815355539!3d40.703660465248056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1491335061565"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- End Contact -->
+
+        <!-- Start Contact for Course -->
+        <section id="contact-course-cont" class="contact">
+            <div class="title">
+                <h1 class="kaushan">Contact</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="form">
+						<h4>Contact For More Information.</h4>
+                        <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="name" class="form-control" type="text" name="name" placeholder="Your Name" required/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="email" class="form-control" type="email" name="email" placeholder="Your Email" required/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="age" class="form-control" type="number" name="age" placeholder="Your Age"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="city" class="form-control" type="text" name="city" placeholder="City/Country of Residence"/>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input id="course" class="form-control" type="text" name="course" placeholder="Course Interested in"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <p>
+                                    <span class="send-btn">
+                                        <input id="btn" class="btn" type="submit" value="Send Message" /><i class="fas fa-long-arrow-alt-right"></i>
+                                    </span>
+                                    <span id="status"></span>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="infos background-gradient">
+                        <h2 class="text-uppercase kaushan">Carla</h2>
+                        <div class="email">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:carla@youngleaders.world">carla@youngleaders.world</a>
+                        </div>
+                        <div class="phone">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+17806609000">1.780.660.9000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+        
+        <!-- End Contact -->
+
+        <!-- Start Loading -->
+        
+        <div class="loading">
+            <div class="blob-grid">
+                <div class="blob blob-0"></div>
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+                <div class="blob blob-4"></div>
+                <div class="blob blob-5"></div>
+            </div>
+        </div>
+        
+        <!-- End Loading -->
+        
+        
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
