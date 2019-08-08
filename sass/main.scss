@@ -111,19 +111,21 @@ section:not(:first-of-type) {
 }
 
 .title {
-    padding: 60px 70px;
+    padding: 40px 70px;
     h1 {
+        font-family: 'Raleway', serif;
         position: relative;
-        font-size: 42px;
+        font-size: 50px;
         color: #1e1e1e;
-        &:before {
-            position: absolute;
-            color: #efefef;
-            text-transform: uppercase;
-            left: -5px;
-            top: 12px;
-            z-index: -1;
-        }
+        text-transform: uppercase;
+        // &:before {
+        //     position: absolute;
+        //     color: #efefef;
+        //     text-transform: uppercase;
+        //     left: -5px;
+        //     top: 12px;
+        //     z-index: -1;
+        // }
     }
 }
 
@@ -627,9 +629,9 @@ section.close-menu {
 .about {
     .title {
         h1 {
-            &:before {
-                content: 'about';
-            }
+            // &:before {
+            //     content: '';
+            // }
         }
     }
     .container {
@@ -649,6 +651,7 @@ section.close-menu {
         }
     }
     .tabs-about {
+        margin-top: 20px;
         ul {
             border-bottom: 1px solid #eee;
         }
@@ -656,9 +659,28 @@ section.close-menu {
             .tab-pane {
                 padding: 30px 20px 0;
                 p {
-                    font-size: 14px;
+                    font-size: 1.3rem;
                     color: #666;
                 }
+                
+                h1{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-family: 'Raleway', serif;
+                }
+                
+                .awards-container{
+                    width: 250px;
+                    margin: 10px 20px 5px 20px;
+
+                    h4{
+                        margin-top: 10px;
+                    }
+                }
+
                 .signature {
                     max-width: 119px;
                 }
@@ -788,7 +810,7 @@ section.close-menu {
                 padding: 30px 20px 0;
                 p {
                     font-size: 14px;
-                    color: #666;
+                    color: black;
                 }
                 &.profile {
                     .title-info {

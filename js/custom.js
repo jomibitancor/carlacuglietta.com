@@ -51,7 +51,7 @@ $(function () {
 			$("link[href*='template']").attr("href", "css/light_template.css");			
 		}
 		else{
-			$("link[href*='template']").attr("href", "css/dark_template.css");			
+			$("link[href*='template']").attr("href", "css/light_template.css");			
 		}
         
         $('.about .about-img').removeClass('show-img-abt');
