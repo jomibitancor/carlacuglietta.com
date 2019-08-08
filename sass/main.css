@@ -742,7 +742,7 @@ a {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -1645,6 +1645,22 @@ section.close-menu {
 
 .educational .container {
   overflow: hidden;
+}
+
+.educational .image-container {
+  background: url(../images/carla.gif);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 900px;
+  margin: auto;
+  height: 506px;
+}
+
+.educational .tab-pane {
+  padding-top: 20px;
+  font-size: 1.3rem;
+  color: #666;
 }
 
 /*==========================================================

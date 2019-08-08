@@ -70,7 +70,7 @@ a {
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     @include font-smoothing;
     overflow-x: hidden;
 }
@@ -875,6 +875,21 @@ section.close-menu {
     .container {
         overflow: hidden;
     }
+    .image-container{
+        background: url(../images/carla.gif);
+        background-size: cover;
+        background-position: center;
+        display: block;
+        width: 900px;
+        margin: auto;
+        height: 506px;
+    }
+    .tab-pane{
+        padding-top: 20px;
+        font-size: 1.3rem;
+        color: #666;
+    }
+
 }
 
 
