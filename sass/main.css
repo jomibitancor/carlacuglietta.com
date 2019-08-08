@@ -1568,7 +1568,7 @@ section.close-menu {
 
 ===========================================================*/
 .keynote .title h1:before {
-  content: 'Speaking';
+  content: '';
 }
 
 .keynote .container {
@@ -1640,7 +1640,7 @@ section.close-menu {
 
 ===========================================================*/
 .educational .title h1:before {
-  content: 'Consulting';
+  content: '';
 }
 
 .educational .container {
@@ -1653,7 +1653,7 @@ section.close-menu {
 
 ===========================================================*/
 .serv .title h1:before {
-  content: 'services';
+  content: '';
 }
 
 .serv .content {
@@ -1713,7 +1713,7 @@ section.close-menu {
 
 ===========================================================*/
 .course .title h1:before {
-  content: 'courses';
+  content: '';
 }
 
 .course .content {
@@ -1782,7 +1782,7 @@ section.close-menu {
 
 ===========================================================*/
 .work .title h1:before {
-  content: 'Humanitarian Work';
+  content: '';
 }
 
 .work .shuffle {
@@ -1885,7 +1885,7 @@ section.close-menu {
 
 ===========================================================*/
 .speaking .title h1:before {
-  content: 'Speaking';
+  content: '';
 }
 
 .speaking .shuffle {
@@ -2003,7 +2003,7 @@ section.close-menu {
 
 ===========================================================*/
 .testim .title h1:before {
-  content: 'Testimonials';
+  content: '';
 }
 
 .testim .tabbable {
@@ -2173,7 +2173,7 @@ section.close-menu {
 }
 
 .contact .title h1:before {
-  content: 'contact';
+  content: '';
 }
 
 .contact .form {
