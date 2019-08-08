@@ -1884,6 +1884,15 @@ section.close-menu {
                     6. START SPEAKING STYLESHEET
 
 ===========================================================*/
+.speaking p {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.speaking .tabs-about .tab-content .tab-pane {
+  padding: 30px 20px 0;
+}
+
 .speaking .title h1:before {
   content: '';
 }

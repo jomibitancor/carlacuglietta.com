@@ -1112,6 +1112,17 @@ section.close-menu {
 ===========================================================*/
 
 .speaking {
+    p{
+        font-size: 1.3rem;
+        color: #666;
+    }
+    .tabs-about{
+        .tab-content{
+            .tab-pane{
+                padding: 30px 20px 0;
+            }
+        }
+    }
     .title {
         h1 {
             &:before {
