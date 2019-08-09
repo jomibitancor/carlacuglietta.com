@@ -47,12 +47,12 @@ $(function () {
         $("section").hide();
         $("#" + myID + "-cont").fadeIn(100);
 		
-		if(myID == "home"){
+		if(myID == "home" ){
 			$("link[href*='template']").attr("href", "css/light_template.css");			
 		}
-		else{
-			$("link[href*='template']").attr("href", "css/light_template.css");			
-		}
+		// else{
+		// 	$("link[href*='template']").attr("href", "css/light_template.css");			
+		// }
         
         $('.about .about-img').removeClass('show-img-abt');
         
