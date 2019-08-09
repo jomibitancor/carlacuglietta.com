@@ -1160,6 +1160,7 @@ section.close-menu {
 
 .home .title .typed-cursor, .home .title .type {
   height: 200px;
+  color: white;
 }
 
 .home .title .btn-home {
