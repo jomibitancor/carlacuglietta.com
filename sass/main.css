@@ -1393,6 +1393,10 @@ section.close-menu {
                     4. ABOUT  NAVBAR STYLESHEET
 
 ===========================================================*/
+.about #awards p {
+  font-size: 15px;
+}
+
 .about .container {
   overflow: hidden;
 }
@@ -1903,7 +1907,78 @@ section.close-menu {
 ===========================================================*/
 .speaking p {
   font-size: 1.3rem;
-  color: #666;
+  color: black;
+}
+
+.speaking h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Raleway', serif;
+}
+
+.speaking #clients {
+  margin-bottom: 50px;
+}
+
+.speaking #clients #client-flex-container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speaking #clients .client-container {
+  padding: 10px 5px 10px 5px;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speaking #clients .client-container img {
+  width: 100%;
+}
+
+.speaking #clients .client-container #conference-board-of-canada {
+  margin-top: 60px;
+}
+
+.speaking #clients .client-container #associated-engineering {
+  margin-top: 40px;
+}
+
+.speaking #clients .client-container #university-of-alberta {
+  margin-top: -10px;
+}
+
+.speaking #clients .client-container #edmonton-catholic-school {
+  margin-top: 30px;
+}
+
+.speaking #clients .client-container #inform-series {
+  margin-top: 40px;
+}
+
+.speaking #clients .client-container #beijing-city-international-school {
+  margin-top: 60px;
+}
+
+.speaking #clients .client-container #suzhou-international-school {
+  margin-top: 30px;
+}
+
+.speaking #youthspeakers-container img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.speaking #youthspeakers-container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .speaking .tabs-about .tab-content .tab-pane {
@@ -1942,6 +2017,15 @@ section.close-menu {
 .speaking .shuffle ul li.active:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.speaking .gallery p {
+  font-size: 16px;
+  color: black;
+}
+
+.speaking .gallery img {
+  margin-bottom: 20px;
 }
 
 .speaking .gallery .item {

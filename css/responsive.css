@@ -225,6 +225,10 @@
     .work .shuffle ul li {
         margin-bottom: 10px;
     }
+
+    .work p{
+        font-size: 13px;
+    }
     
     /* Speaking */
 

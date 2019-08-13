@@ -628,6 +628,13 @@ section.close-menu {
 ===========================================================*/
 
 .about {
+
+    #awards{
+        p{
+            font-size: 15px;
+        }
+    }
+
     .title {
         h1 {
             // &:before {
@@ -1130,8 +1137,70 @@ section.close-menu {
 .speaking {
     p{
         font-size: 1.3rem;
-        color: #666;
+        color: black;
     }
+    h2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Raleway', serif;
+    }
+
+    #clients{
+        margin-bottom: 50px;
+
+        #client-flex-container{
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .client-container{
+            padding: 10px 5px 10px 5px;
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img{
+                width: 100%;
+            }
+            #conference-board-of-canada{
+                margin-top: 60px;
+            }
+            #associated-engineering{
+                margin-top: 40px;
+            }
+            #university-of-alberta{
+                margin-top: -10px;
+            }
+            #edmonton-catholic-school{
+                margin-top: 30px;
+            }
+            #inform-series{
+                margin-top: 40px;
+            }
+            #beijing-city-international-school{
+                margin-top: 60px;
+            }
+            #suzhou-international-school{
+                margin-top: 30px;
+            }
+        }
+    }
+
+    #youthspeakers-container{
+        img{
+            transform: scale(0.9);
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+    }
+
     .tabs-about{
         .tab-content{
             .tab-pane{
@@ -1170,6 +1239,13 @@ section.close-menu {
         
     }
     .gallery {
+        p{
+            font-size: 16px;
+            color: black;
+        }
+        img{
+            margin-bottom: 20px;
+        }
         .item {
             position: relative;
             margin-bottom: 20px;
