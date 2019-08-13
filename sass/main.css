@@ -1802,6 +1802,10 @@ section.close-menu {
                     6. START PORTFOLIO STYLESHEET
 
 ===========================================================*/
+.work .title {
+  margin-top: 50px;
+}
+
 .work .title h1:before {
   content: '';
 }
