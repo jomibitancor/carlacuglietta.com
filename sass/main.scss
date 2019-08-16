@@ -1127,6 +1127,125 @@ section.close-menu {
     }
 }
 
+/*==========================================================
+
+                     START VIDEOS STYLESHEET
+
+===========================================================*/
+
+.videos {
+    .title {
+        margin-top: 50px;
+        h1 {
+            &:before {
+                content: '';
+            }
+        }
+    }
+    .video-container{
+        width: 70%;
+        height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .video-description{
+        p{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: 'Roboto Slab', serif;
+            
+            padding-top: 20px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .shuffle {
+        margin-bottom: 40px;
+        ul {
+            text-align: center;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+                padding: 5px 18px;
+                border-radius: 25px;
+                font-size: 15px;
+                &.active {
+                    color: #FFF;
+                    box-shadow: 0px 1px 8px #ddd;
+                    @include animate( all, 320ms, ease-in-out );
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        
+    }
+    .gallery {
+        .item {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @include animate( all, 320ms, ease-in-out );
+            .over {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #FFF;
+                background-color: rgba(0,0,0,0.6);
+                opacity: 0;
+                z-index: 1;
+                @include animate( all, 320ms, ease-in-out );
+                .info-img {
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    right: 12px;
+                    text-align: left;
+                    h4 {
+                        font-size: 24px;
+                    }
+                    span {
+                        font-size: 14px;
+                        letter-spacing: 0.8px;
+                    }
+                }
+                a {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+            img {
+                @include animate( all, 600ms, ease-in-out );
+                @include transform( scale(1) );
+            }
+            &:hover {
+                img {
+                    width: 100%;
+                    @include transform( scale(1.2) );
+                }
+                .over {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 
 
 /*==========================================================
@@ -1158,6 +1277,14 @@ section.close-menu {
             margin-right: auto;
         }
 
+        #conference-board-of-canada-container{
+            width: 300px;
+        }
+
+        #conference-board-of-canada{
+            width: 100%;
+        }
+
         .client-container{
             padding: 10px 5px 10px 5px;
             width: 150px;
@@ -1167,9 +1294,6 @@ section.close-menu {
 
             img{
                 width: 100%;
-            }
-            #conference-board-of-canada{
-                margin-top: 60px;
             }
             #associated-engineering{
                 margin-top: 40px;
